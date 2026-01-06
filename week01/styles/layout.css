@@ -8,17 +8,36 @@ header {
     background-color: rgb(58, 58, 58);
     color: white;
     grid-column: span 3;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .navigation {
     display: flex;
-    padding: 1rem;
+    flex-wrap: wrap;
     background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
 }
 
-ul {
-    justify-content: space-around;
-    margin: 0;
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    color: rgb(163, 253, 253);
+}
+
+li {
+    flex: 1 1 auto;
+    list-style-type: none;
+    padding: 1rem;
 }
 
 body {
@@ -28,14 +47,18 @@ body {
 
 main {
     background-color: rgb(212, 212, 212);
+    min-height: 300px;
+    grid-column: span 2;
 }
 
 aside {
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
 }
 
 footer {
     background-color: rgb(58, 58, 58);
     color: white;
     grid-column: span 3;
+    text-align: center;
+    min-height: 150px;
 }
