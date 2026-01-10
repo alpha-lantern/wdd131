@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Alvin Timaná</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Alvin Timaná. BYU-Idaho. Main page for assignments.">
+    <meta name="author" content="Alvin Timaná">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://www.linkedin.com/in/alvin-timana">Linkedin</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p28-p29#p28">Scripture</a></li>
+                <li><a href="">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Alvin Timaná</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <img id="profile-pic" src="images/profile.jpg" alt="Web Developer Alvin Timaná">
+            <p>My name is Alvin Timaná and I'm from Lima, Peru. My family and I have always lived here. I'm currently studying Software Development at BYU-Idaho through BYU-Pathway. I love learning new things and coding, and I want to become a skilled web and software developer. I also like soccer, video games and watching movies or TV shows with my family.</p>
+            <span id="country">
+                <h3>Peru</h3>
+                <figure id="flag-pic">
+                    <img src="images/peru-flag.jpg" alt="Peru's flag">
+                    <figcaption>Official Flag of República del Perú</figcaption>
+                </figure>
+                <p>The sovereign state of Peru is a representative democratic republic divided into 25 regions. Its capital and largest city is Lima. Peru's main economic activities include mining, manufacturing, agriculture and fishing, along with other growing sectors such as telecommunications and biotechnology.</p>
+            </span>
+            
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <img src="" alt="">
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity#what_is_javascript">JavaScript - MDN</a></li>
+                <li><a href="https://byui-cse.github.io/cse-ww-program/student/frontend-resources.html">Web Frontend Resources</a></li>
+                <li><a href="https://htmlreference.io/">HTML Reference</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                <li><a href="https://squoosh.app/">Squoosh</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentYear"></span> 🏆 Alvin Timaná 🏆 Lima, Perú</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #16342C;
+    --secondary-color: rgb(71, 71, 71);
+    --accent-color: #eee;
+    --hover-color: #B9BF0B;
+    --border: 1px solid rgba(80, 80, 80, 0.5);
+    --body-font: "Roboto", "sans-serif";
+    --accent-font-weight: 600; /* For titles and contrast */
+}
+
+* {
+    font-family: var(--body-font);
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+h1, h2, #course-title, footer p {
+    font-weight: var(--accent-font-weight);
+}
+
+#course-title {
+    display: block;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+}
+
+/* Navigation Bar */
+.navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: var(--secondary-color);
+}
+
+.navigation li {
+    padding: 0.8rem;
+    flex: 1 1 auto;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.navigation a:hover {
+    color: var(--hover-color);
+    font-weight: var(--accent-font-weight);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: auto 1fr / 2fr 1fr;
+}
+
+h1 {
+    grid-column: span 2;
+    text-align: center;
+    align-items: center;
+}
+
+/* Cards style */
+.card {
+    margin: 0 0.5rem 1rem;
+    border: var(--border);
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    font-size: medium;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+#profile-pic {
+    float: right;
+    margin: 1rem 2rem 1rem 1rem;
+    border: var(--border);
+}
+
+#country {
+    display: block;
+    margin: 2rem 0 1rem;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 1rem;
+    border-bottom: var(--border);
+}
+
+#flag-pic {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 0 1rem 0.5rem;
+    font-size: small;
+    text-align: center;
+}
+
+.card p, .card ul {
+    margin: 1rem;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    align-items: center;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+footer p {
+    margin: 0.5rem;
+}
+
+#lastModified {
+    font-size: 0.9rem;
+    color: var(--hover-color);
+}
