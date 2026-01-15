@@ -20,13 +20,8 @@ body {
 header, footer {
     background-color: var(--primary-color);
     color: var(--accent-color);
-    padding: 1rem 0;
+    padding: 1rem;
     margin: 0 auto;
-}
-
-header span {
-    font-size: 2rem;
-    margin: 1rem;
 }
 
 /* Hamburger menu */
@@ -35,6 +30,7 @@ header span {
     border: 0;
     background: none;
     position: absolute;
+    top: 1.5rem;
     right: 1rem;
     color: var(--accent-color);
 }
@@ -48,6 +44,16 @@ header span {
 }
 
 /* Navigation elements */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav span {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -71,10 +77,6 @@ header span {
 /* When the menu is open */
 .open a {
     display: block;
-}
-
-.open {
-    padding-bottom: 0;
 }
 
 /* Main part of the page */
@@ -110,7 +112,6 @@ figure img {
 
 /* Footer */
 footer {
-    align-items: center;
     text-align: center;
     padding: 0.5rem;
 }
