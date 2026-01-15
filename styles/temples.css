@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #2D3C59;
+    --secondary-color: #111111;
+    --accent-color: #eee;
+    --hover-color: #DCEAF2;
+    --body-font: "Roboto", "sans-serif";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--secondary-color);
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+header span {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* Hamburger menu */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 1rem;
+    color: var(--accent-color);
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "⮌";
+}
+
+/* Navigation elements */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--primary-color);
+    justify-content: space-evenly;
+}
+
+.navigation a {
+    display: none;
+    color: var(--accent-color);
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.navigation a:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+}
+
+/* When the menu is open */
+.open a {
+    display: block;
+}
+
+.open {
+    padding-bottom: 0;
+}
+
+/* Main part of the page */
+main {
+    max-width: 95%;
+    margin: 1rem auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    align-items: center;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+figure {
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+footer p {
+    margin: 0.5rem;
+}
+
+#lastModified {
+    font-size: 0.9rem;
+    color: var(--hover-color);
+}
