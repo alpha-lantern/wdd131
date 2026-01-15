@@ -52,7 +52,6 @@ header span {
     display: flex;
     flex-direction: column;
     list-style: none;
-    background-color: var(--primary-color);
     justify-content: space-evenly;
 }
 
