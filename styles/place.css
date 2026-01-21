@@ -1,8 +1,7 @@
 :root {
     --primary-color: #1F591D;
-    --accent-color1: #ffffff;
+    --accent-color1: #ffffff;   /*An optional color if there's more content:  #D9AB23*/
     --secondary-color: #101C40;
-    --accent-color2: #D9AB23;
     --main-font: "Roboto", "sans-serif";
 }
 
@@ -25,13 +24,16 @@ header, footer {
 }
 
 main {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    line-height: 1.8rem;
 }
 
 .hero {
+    background-color: var(--secondary-color);
+    padding-top: 0.2rem;
+}
+
+.hero img {
     margin: 0 auto;
     width: 100%;
     height: auto;
@@ -39,8 +41,7 @@ main {
 
 .card {
     background-color: var(--accent-color1);
-    border-bottom: 2px solid var(--accent-color2);
-    width: 100%;
+    border-bottom: 2px solid var(--secondary-color);
     padding: 2rem;
 }
 
@@ -48,15 +49,25 @@ main {
     text-align: center;
 }
 
+.card span {
+    display: none;
+}
+
 .card img{
     display: block;
     margin: 1rem auto;
-    width: 70px;
+    width: 3rem;
     height: auto;
 }
 
 .card table {
     margin: 1rem auto;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.card th, td {
+    padding: 0.3rem;
 }
 
 .card th {
@@ -65,4 +76,69 @@ main {
 
 .card td {
     text-align: start;
+}
+
+/* Different Media Display */
+@media (min-width: 370px) {
+    header {
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+}
+
+@media (min-width: 550px) {
+    header {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        position: relative;
+    }
+
+    .hero img {
+        max-height: 83dvh;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card {
+        position: absolute;
+        opacity: .8;
+        padding: 0.5rem 1rem;
+    }
+
+    .card h2 {
+        text-align: left;
+        padding: 1rem;
+        background-color: var(--secondary-color);
+        color: var(--accent-color1);
+        margin: 0 1rem 1rem -1.5rem;
+    }
+
+    .card span {
+        display: inline;
+        float: right;
+    }
+
+    .card img {
+        display: none;
+    }
+
+    .card table {
+        width: auto;
+    }
+
+    .left {
+        left: 1rem;
+        top: 2rem;
+    }
+
+    .right {
+        right: 1rem;
+        bottom: 2rem;
+    }
 }

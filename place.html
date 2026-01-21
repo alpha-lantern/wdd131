@@ -21,12 +21,12 @@
     </header>
     <main>
         <picture class="hero">
-            <source media="(min-width: 1000px)" srcset="images/rj-hero-large.webp">
-            <source media="(min-width: 750px)" srcset="images/hero-medium.webp">
-            <img src="images/rj-hero-mobile.webp" alt="Brazil" width="500" height="auto">
+            <source media="(min-width: 900px)" srcset="images/rj-hero-large.webp">
+            <source media="(min-width: 550px)" srcset="images/rj-hero-medium.webp">
+            <img src="images/rj-hero-mobile.webp" fetchpriority=high alt="Cristo Redentor. RJ, Brazil" width="1920" height="1080">
         </picture>
 
-        <section class="card">
+        <section class="card left">
             <h2>Data</h2>
             <table>
                 <tr>
@@ -41,19 +41,47 @@
                     <th>Capital:</th>
                     <td>Brasilia</td>
                 </tr>
+                <tr>
+                    <th>Languages:</th>
+                    <td>Portuguese</td>
+                </tr>
+                <tr>
+                    <th>Currency:</th>
+                    <td>Real (R$) (BRL)</td>
+                </tr>
+                <tr>
+                    <th>Time Zone:</th>
+                    <td>UTC-2 to UTC-5</td>
+                </tr>
+                <tr>
+                    <th>Calling Code:</th>
+                    <td>+55</td>
+                </tr>
+                <tr>
+                    <th>Internet TDL:</th>
+                    <td>.br</td>
+                </tr>
             </table>
         </section>
-        <section class="card">
-            <h2>Weather</h2>
-            <img src="images/sunny-weather.svg" alt="weather icon" width="25" height="25">
+        <section class="card right">
+            <h2>Weather <span>🌦️</span></h2>
+            <img src="images/cloud-drizzle-weather.svg" alt="weather icon" width="25" height="25">
             <table>
                 <tr>
                     <th>Temperature:</th>
-                    <td>40 ºC</td>
+                    <td id="temperature"></td>
                 </tr>
                 <tr>
                     <th>Conditions:</th>
-                    <td>Unknown</td>
+                    <td id="conditions"></td>
+                </tr>
+                <tr>
+                    <th>Wind:</th>
+                    <td id="wind"></td>
+                </tr>
+                <tr>
+                    <th>Wind Chill:</th>
+                    <td id="windChill"></td>
                 </tr>
             </table>
         </section>
