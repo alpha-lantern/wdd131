@@ -13,6 +13,7 @@
 
 body {
     font-family: var(--main-font);
+    min-height: 100dvh;
 }
 
 header, footer {
@@ -37,6 +38,9 @@ main {
     margin: 0 auto;
     width: 100%;
     height: auto;
+    object-fit: cover;
+    object-position: center;
+    max-height: 83dvh;
 }
 
 .card {
@@ -52,14 +56,14 @@ main {
 .card span {
     display: none;
 }
-
+/* Icon */
 .card img{
     display: block;
     margin: 1rem auto;
     width: 3rem;
     height: auto;
 }
-
+/* Data and weather table */
 .card table {
     margin: 1rem auto;
     width: 100%;
@@ -79,30 +83,22 @@ main {
 }
 
 /* Different Media Display */
-@media (min-width: 370px) {
-    header {
-        position: absolute;
-        width: 100%;
-        top: 0;
+/* Medium */
+/* Large */
+@media (min-width: 950px) {
+    body {
+        display: flex;
+        flex-direction: column;
     }
-}
-
-@media (min-width: 550px) {
-    header {
-        position: relative;
-        width: 100%;
-    }
-}
-
-@media (min-width: 900px) {
+    
     main {
         position: relative;
+        flex: 1;
     }
 
     .hero img {
-        max-height: 83dvh;
-        height: auto;
-        object-fit: cover;
+        height: 100%;
+        max-width: auto;
     }
 
     .card {
@@ -119,11 +115,6 @@ main {
         margin: 0 1rem 1rem -1.5rem;
     }
 
-    .card span {
-        display: inline;
-        float: right;
-    }
-
     .card img {
         display: none;
     }
@@ -132,13 +123,19 @@ main {
         width: auto;
     }
 
-    .left {
+    .data {
         left: 1rem;
         top: 2rem;
     }
 
-    .right {
+    .weather {
         right: 1rem;
         bottom: 2rem;
     }
+    /* Weather icon */
+    .weather h2::after {
+        content: "🌦️";
+        float: right;
+    }
+
 }
