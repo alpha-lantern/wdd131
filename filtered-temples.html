@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | WDD131 - Alvin Timaná</title>
+    <meta name="description" content="My personal temples album from around the world. WDD 131 - Dynamic Web Fundamentals - Alvin Timaná.">
+    <meta name="author" content="Alvin Timaná">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..700&display=swap" rel="stylesheet">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="menu" aria-label="Open or Close Menu"></button>
+        <nav>
+            <span>Temple Album</span>
+            <ul class="navigation">
+                <li><a id="home" href="#">Home</a></li>
+                <li><a id="old" href="#">Old</a></li>
+                <li><a id="new" href="#">New</a></li>
+                <li><a id="large" href="#">Large</a></li>
+                <li><a id="small" href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div id="container">
+
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span> 🏆 Alvin Timaná 🏆 Lima, Perú</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
