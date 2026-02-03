@@ -40,7 +40,7 @@ header, footer {
 }
 
 #menu.open::before {
-    content: "⮌";
+    content: "X";
 }
 
 /* Navigation elements */
