@@ -54,8 +54,7 @@ section {
 }
 
 #colors p:after {
-    content: "■";
-    font-size: 1.5rem;
+    content: "██";
 }
 
 #main-color {
