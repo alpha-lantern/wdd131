@@ -70,6 +70,11 @@ section {
     color: var(--accent-color1);
 }
 
+#accent-color:hover {
+    color: var(--accent-color1);
+    text-shadow: 0 0 2px;
+}
+
 #headings-color:after {
     color: var(--secondary-color);
 }
