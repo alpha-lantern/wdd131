@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="This is a product review form, created using different form elements and best practices for forms.">
+    <meta name="author" content="Alvin Timaná">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form class="revf" method="get" action="review.html">
+            <!-- Product Name -->
+            <label for="product">Product Name</label>
+            <select name="product" id="product">
+                <option value="" selected disabled>Select a Product ...</option>
+            </select>
+            <!-- Overall Rating -->
+            <label>Overall Rating</label>
+            <div class="stars">
+                <label for="one-star">&star;</label><input type="radio" id="one-star" name="stars" required>
+                <label for="two-star">&star;&star;</label><input type="radio" id="two-star" name="stars" required>
+                <label for="three-star">&star;&star;&star;</label><input type="radio" id="three-star" name="stars" required>
+                <label for="four-star">&star;&star;&star;&star;</label><input type="radio" id="four-star" name="stars" required>
+                <label for="five-star">&star;&star;&star;&star;&star;</label><input type="radio" id="five-star" name="stars" required>
+            </div>
+            <!-- Date of Installation -->
+            <label for="date">Date of Installation<input type="date" id="date" name="date" required></label>
+            <!-- Useful Features -->
+            <div class="features">Which feature did you find useful in the product? <br><cite>(Check all that apply)</cite>
+                <label for="ease"><input type="checkbox" name="ease" id="ease">Ease of Use</label>
+                <label for="design"><input type="checkbox" name="design" id="design">Design</label>
+                <label for="durability"><input type="checkbox" name="durability" id="durability">Durability</label>
+                <label for="performance"><input type="checkbox" name="performance" id="performance">Performance</label>
+            </div>
+            <!-- Written Review -->
+            <label for="review" class="optional">Write your Review</label>
+            <input type="textarea" id="review" name="review">
+            
+            <!-- User Name -->
+            <label for="name" class="optional">Your Name</label>
+            <input type="text" name="name" id="name" autocomplete="true">
+            
+            <!-- Form Submission Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span> 🏆 Alvin Timaná 🏆 Lima, Perú</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

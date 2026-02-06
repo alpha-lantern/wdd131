@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #b8dfd4; /* Background color */
+    --secondary-color: #202020; /* Text */
+    --accent-color: #d9e010; /* Header and Footer */
+    --body-font: "Roboto", "sans-serif";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    margin: 1rem auto;
+    max-width: 450px;
+    color: var(--secondary-color);
+    font-family: var(--body-font);
+}
+
+header, footer {
+    background-color: var(--accent-color);
+    padding: .8rem;
+    text-align: center;
+}
+
+/* ------- PRODUCT REVIEW FORM ------- */
+.revf {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: .8rem;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.revf label {
+    margin-top: .5rem;
+}
+
+.revf input[type="text"], #product, 
+.revf input[type="date"],
+.revf input[type="textarea"],
+.revf input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    margin: .2rem 0 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+/* --- Rating and Feature divs --- */
+.revf div {
+    margin: 1rem 0;
+}
+
+.revf input[type="checkbox"], 
+.revf input[type="radio"] {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* --- Features --- */
+.revf input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.features label {
+    display: flex;
+}
+
+/* --- Stars --- */
+.stars {
+    display: grid;
+    grid-template:  1fr 1fr / repeat(5, 1fr);
+}
+
+.stars label {
+    text-align: center;
+    margin: 0;
+}
+
+.revf input[type="radio"] {
+    display: block;
+    order: 1;
+    margin: auto;
+}
+
+/* --- SUBMIT button --- */
+.revf input[type="submit"] {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-image: linear-gradient(.25turn, var(--primary-color), var(--accent-color));
+    box-shadow: 0 2px 5px;
+}
+
+/* --- Optional Label --- */
+.optional::after {
+    content: " (Optional)";
+    color: blue;
+    font-size: .7rem;
+}
+
+/* ------------ REVIEW HTML ------------ */
+
+.reviewPost {
+    padding: 1rem;
+    text-align: center;
+}
+
+.counter {
+    padding-top: 1rem;
+}
+
+a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
