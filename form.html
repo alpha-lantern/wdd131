@@ -9,7 +9,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/form.css">
     <!-- Fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..700&display=swap" rel="stylesheet">
     <!-- Scripts -->
     <script src="scripts/form.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
@@ -23,16 +25,25 @@
             <!-- Product Name -->
             <label for="product">Product Name</label>
             <select name="product" id="product">
-                <option value="" selected disabled>Select a Product ...</option>
+                <option value="" disabled selected required>Select a Product ...</option>
             </select>
             <!-- Overall Rating -->
             <label>Overall Rating</label>
             <div class="stars">
-                <label for="one-star">&star;</label><input type="radio" id="one-star" name="stars" required>
-                <label for="two-star">&star;&star;</label><input type="radio" id="two-star" name="stars" required>
-                <label for="three-star">&star;&star;&star;</label><input type="radio" id="three-star" name="stars" required>
-                <label for="four-star">&star;&star;&star;&star;</label><input type="radio" id="four-star" name="stars" required>
-                <label for="five-star">&star;&star;&star;&star;&star;</label><input type="radio" id="five-star" name="stars" required>
+                <label for="one-star">&star;</label>
+                <input type="radio" value="1" id="one-star" name="stars" required>
+
+                <label for="two-star">&star;&star;</label>
+                <input type="radio" value="2" id="two-star" name="stars" required>
+
+                <label for="three-star">&star;&star;&star;</label>
+                <input type="radio" value="3" id="three-star" name="stars" required>
+
+                <label for="four-star">&star;&star;&star;&star;</label>
+                <input type="radio" value="4" id="four-star" name="stars" required>
+
+                <label for="five-star">&star;&star;&star;&star;&star;</label>
+                <input type="radio" value="5" id="five-star" name="stars" required>
             </div>
             <!-- Date of Installation -->
             <label for="date">Date of Installation<input type="date" id="date" name="date" required></label>
@@ -45,11 +56,11 @@
             </div>
             <!-- Written Review -->
             <label for="review" class="optional">Write your Review</label>
-            <input type="textarea" id="review" name="review">
+            <textarea name="review" id="review"></textarea>
             
             <!-- User Name -->
             <label for="name" class="optional">Your Name</label>
-            <input type="text" name="name" id="name" autocomplete="true">
+            <input type="text" name="name" id="name" autocomplete="name">
             
             <!-- Form Submission Button -->
             <input type="submit" value="Post Review">

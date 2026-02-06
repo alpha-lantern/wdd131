@@ -13,7 +13,7 @@
 
 header, main, footer {
     margin: 1rem auto;
-    max-width: 450px;
+    max-width: 96%;
     color: var(--secondary-color);
     font-family: var(--body-font);
 }
@@ -39,7 +39,7 @@ header, footer {
 
 .revf input[type="text"], #product, 
 .revf input[type="date"],
-.revf input[type="textarea"],
+.revf textarea,
 .revf input[type="submit"] {
     display: block;
     width: 100%;
@@ -49,6 +49,11 @@ header, footer {
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
 }
+
+.revf textarea {
+    min-height: 80px;
+}
+
 /* --- Rating and Feature divs --- */
 .revf div {
     margin: 1rem 0;
@@ -122,4 +127,10 @@ a {
 a:hover {
     font-weight: 700;
     text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+    header, main, footer {
+        max-width: 580px;
+    }
 }
