@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great & Small Whiskers - Pet Shelter</title>
+    <meta name="description" content="Welcome to Great & Small Whiskers! Here all kind of pets are part of our family.">
+    <meta name="author" content="Alvin Timaná">
+    <!-- /////////// - STYLES - /////////// -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- //////////// - FONTS - //////////// -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Spectral&display=swap" rel="stylesheet">
+    <!-- /////////// - SCRIPTS - /////////// -->
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <img src="images/logo.svg" alt="Great & Small Whiskers!">
+        <!-- Nav Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt-help.html">Adopt & Help</a></li>
+                <li><a href="care-center.html">Pet Care</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO IMAGE -->
+        <picture class="hero">
+            <source media="(max-width: 450px)" src="images/hero-small.webp">
+            <source media="(max-width: 800px)" src="images/hero-medium.webp">
+            <img src="images/hero.webp" alt="Pets at Great & Small Whiskers">
+        </picture>
+        <h1>WELCOME TO GREAT & SMALL WHISKERS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptates odit nesciunt consequuntur officia officiis laudantium numquam exercitationem id mollitia est commodi doloribus, quaerat deserunt architecto ea aut reiciendis suscipit?</p>
+        <!-- INFO SECTION -->
+        <section>
+            <h2>MORE THAN A SHELTER</h2>
+            <!-- CARDS -->
+            <div>
+                <figure>
+                    <figcaption>Rescued pets</figcaption>
+                    <img src="images/pets.webp" alt="Pets for adoption">
+                    <p></p>
+                    <span class="button"><a href="adopt-help.html">Adopt</a></span>
+                </figure>
+                <figure>
+                    <figcaption>Be part of our family</figcaption>
+                    <img src="images/family.webp" alt="Great & Small Whiskers family">
+                    <p></p>
+                    <span class="button"><a href="adopt-help.html">Help</a></span>
+                </figure>
+                <figure>
+                    <figcaption>Pet care services</figcaption>
+                    <img src="images/pet-care.webp" alt="Pet care services">
+                    <p></p>
+                    <span class="button"><a href="">Know More</a></span>
+                </figure>
+            </div>
+        </section>
+        <!-- CONTACT / FORM SECTION -->
+        <section>
+            <h2>JOIN US!</h2>
+            <!-- FORM -->
+            <div class="form">
+                <img src="" alt="">
+                <form method="get" action="thanks.html">
+                    <fieldset>
+                        <legend>Receive updates</legend>
+
+                        <label>Full Name<input type="text" name="name" id="name" required></label>
+
+                        <label>Email<input type="email" name="email" id="email" placeholder="example@mail.com" required></label>
+
+                        <button title="subscribe">Subscribe</button>
+                        <p>By subscribing, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</p>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Logo -->
+        <img src="images/logo.svg" alt="Great & Small Whiskers!">
+        <!-- Useful Links -->
+        <nav>
+            <ul>
+                <li><a href="adopt.html">Adopt & Help</a></li>
+                <li><a href="care-center.html">Pet Care</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+        <!-- Social Media Logos -->
+        <div>
+            <img src="" alt="Instagram">
+            <img src="" alt="Facebook">
+            <img src="" alt="X (Twitter)">
+        </div>
+        <p>©<span id="currentYear"></span> Great & Small Whiskers 🐶 Alvin Timaná 🐱 Lima, Perú</p>
+    </footer>
+</body>
+</html>
