@@ -1,0 +1,110 @@
+@media (min-width: 501px) {
+    /* ------------ GENERAL ------------ */
+    main {
+        max-width: 1000px;
+        margin: 0 auto 1rem;
+    }
+
+    .f-footer, nav {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* HEADER */
+    #bName {
+        display: initial;
+    }
+
+    /* NAVIGATION */
+    #menu {
+        display: none;
+    }
+
+    nav {
+        justify-content: space-between;
+        flex: 1 1 auto;
+        padding: 0;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 1rem;
+        margin: 0.2rem;
+    }
+
+    /* -------------- FORM -------------- */
+    .formContainer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    .formContainer img {
+        max-height: 300px;
+        width: 100%;
+        height: auto;
+        opacity: 100%;
+        padding: 0 0.5rem;
+    }
+
+    #subsForm {
+        position: relative;
+    }
+
+    /* ----- FOOTER ADDITIONAL RULES ----- */
+    #media {
+        display: flex;
+    }
+
+    #media a {
+        margin: .2rem .5rem;
+    }
+
+    #facebook-logo {
+        background-color: var(--background-color);
+        max-height: 30px;
+        border-radius: 5px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1001px) {
+    /* MAIN */
+    .hero {
+        display: flex;
+        position: relative;
+        background-color: var(--text-color);
+        height: min-content;
+    }
+
+    .hero picture {
+        order: -1;
+        opacity: .6;
+    }
+
+    .hero h1, .hero p {
+        position: absolute;
+        color: var(--background-color);
+    }
+
+    .hero h1 {
+        left: 10%;
+        right: 10%;
+        top: 15%;
+        padding: 1rem;
+        margin: 0 auto;
+        font-size: 4rem;
+        color: var(--background-color);
+    }
+
+    .hero p {
+        bottom: 35%;
+        padding: 2rem;
+    }
+}

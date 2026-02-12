@@ -7,8 +7,8 @@
     <meta name="description" content="Welcome to Great & Small Whiskers! Here all kind of pets are part of our family.">
     <meta name="author" content="Alvin Timaná">
     <!-- /////////// - STYLES - /////////// -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/main-large.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
     <!-- //////////// - FONTS - //////////// -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,14 +33,16 @@
     </header>
 
     <main>
-        <h1>WELCOME TO GREAT & SMALL WHISKERS</h1>
         <!-- HERO IMAGE -->
-        <picture class="hero">
-            <source media="(max-width: 450px)" src="images/hero-small.webp">
-            <source media="(max-width: 800px)" src="images/hero-medium.webp">
-            <img src="images/hero-large.webp" alt="Pets at Great & Small Whiskers" width="1500" height="1000">
-        </picture>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptates odit nesciunt consequuntur officia officiis laudantium numquam exercitationem id mollitia est commodi doloribus, quaerat deserunt architecto ea aut reiciendis suscipit?</p>
+        <div class="hero">
+            <h1>WELCOME TO GREAT & SMALL WHISKERS</h1>
+            <picture>
+                <source media="(max-width: 450px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="Pets at Great & Small Whiskers" width="1500" height="1000" fetchpriority=high>
+            </picture>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptates odit nesciunt consequuntur officia officiis laudantium numquam exercitationem id mollitia est commodi doloribus, quaerat deserunt architecto ea aut reiciendis suscipit?</p>
+        </div>
         <!-- INFO SECTION -->
         <section>
             <h2>MORE THAN A SHELTER</h2>
@@ -72,7 +74,7 @@
             <!-- FORM -->
             <div class="formContainer">
                 <picture>
-                    <source media="(max-width: 500px)" src="images/pets-call-small.webp">
+                    <source media="(max-width: 500px)" srcset="images/pets-call-small.webp">
                     <img src="images/pets-call-medium.webp" alt="Cat and dog playing together" loading="lazy">
                 </picture>
                 <form id="subsForm" method="get" action="thanks.html">
@@ -83,8 +85,8 @@
 
                         <label>Email<input type="email" name="email" id="email" placeholder="example@mail.com" required></label>
 
-                        <button title="subscribe">Subscribe</button>
-                        <p>By subscribing, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</p>
+                        <button class="button" title="subscribe">Subscribe</button>
+                        <p class="links">By subscribing, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</p>
                     </fieldset>
                 </form>
             </div>
@@ -98,7 +100,7 @@
             <!-- Useful Links -->
             <nav class="links">
                 <ul>
-                    <li><a href="adopt.html">Adopt & Help</a></li>
+                    <li><a href="adopt-help.html">Adopt & Help</a></li>
                     <li><a href="care-center.html">Pet Care</a></li>
                     <li><a href="references.html">References</a></li>
                 </ul>
@@ -106,9 +108,9 @@
             <!-- Social Media Logos -->
             <div id="media">
                 <p>Follow Us:</p>
-                <img src="" alt="Instagram">
-                <img src="" alt="Facebook">
-                <img src="" alt="X (Twitter)">
+                <a href="https://instragram.com"><img src="images/instagram-logo.svg" alt="Instagram" width="30" height="30"></a>
+                <a id="facebook-logo" href="https://facebook.com"><img src="images/facebook-logo.svg" alt="Facebook" width="30" height="30"></a>
+                <a href="https://x.com"><img src="images/twitter-x-logo.svg" alt="Twitter - X" width="30" height="30"></a>
             </div>
         </div>
         <p>©<span id="currentYear"></span> Great & Small Whiskers. 🐶 Alvin Timaná 🐱 Lima, Perú</p>
