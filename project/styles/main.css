@@ -1,9 +1,9 @@
 :root {
-    --main-color: #68F4B4; /* "Tropical Mint" Header - Logo */
-    --secondary-color: #1e4197; /* "Sapphire" Headings and contrast */
-    --accent-color1: #F5697B; /* "Bubblegum Pink" Effects - Logo */
-    --background-color: #ffffff; /* Background */
-    --text-color: #272727; /* Text */
+    --main-color: #1e7fa7; /* "Cerulean" Header */
+    --secondary-color: #2B50AA; /* "Tropical Mint" Contrast */
+    --accent-color1: #EE9DAA; /* "Bubblegum Pink" Effects - Works with text-color as Background */
+    --background-color: #ffffff; /* "White" Background and Contrast Text */
+    --text-color: #272727; /* "Shadow Grey" Text */
     --heading-font: "Roboto", sans-serif;
     --body-font: "Spectral", serif;
 }
@@ -22,8 +22,8 @@ body {
 
 h1, h2, h3 {
     font-family: var(--heading-font);
-    color: var(--secondary-color);
     font-weight: 700;
+    color: var(--secondary-color);
 }
 
 p {
@@ -37,6 +37,7 @@ header {
     background-color: var(--main-color);
     align-items: center;
     position: relative;
+    color: var(--background-color);
 }
 
 .logo {
@@ -61,6 +62,7 @@ header {
     top: 1rem;
     right: 1rem;
     font-weight: 600;
+    color: var(--background-color);
 }
 
 #menu::before {
@@ -87,7 +89,7 @@ nav {
 }
 
 .navigation a {
-    color: var(--text-color);
+    color: var(--background-color);
     display: none;
     text-decoration: none;
     text-align: center;
@@ -208,22 +210,25 @@ section {
 }
 
 #subsForm button:hover {
-    background-color: var(--accent-color1);
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 
 /* Terms and conditions */
 #subsForm a {
-    color: var(--main-color);
-}
-
-#subsForm a:hover {
     color: var(--accent-color1);
+    text-decoration: none;
+}
+/* General a:hover effect */
+#subsForm a:hover, .links a:hover {
+    text-decoration: underline;
 }
 
 /* -------------- FOOTER -------------- */
 footer {
     background-color: var(--main-color);
     padding: 0.5rem;
+    color: var(--background-color);
 }
 
 .f-footer {
@@ -245,10 +250,5 @@ footer {
 .links a {
     padding: 1rem;
     text-decoration: none;
-    color: var(--body-color);
-}
-
-.links a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+    color: var(--background-color);
 }

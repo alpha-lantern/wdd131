@@ -1,9 +1,9 @@
 :root {
-    --main-color: #68F4B4; /* "Tropical Mint" Header - Logo */
-    --secondary-color: #1e4197; /* "Sapphire" Headings and contrast */
-    --accent-color1: #F5697B; /* "Bubblegum Pink" Effects - Logo */
-    --background-color: #ffffff; /* Background */
-    --text-color: #272727; /* Text */
+    --main-color: #1e7fa7; /* "Cerulean" Header */
+    --secondary-color: #2B50AA; /* "Tropical Mint" Contrast */
+    --accent-color1: #EE9DAA; /* "Bubblegum Pink" Effects - Works with text-color as Background */
+    --background-color: #ffffff; /* "White" Background and Contrast Text */
+    --text-color: #272727; /* "Shadow Grey" Text */
     --heading-font: "Roboto", sans-serif;
     --body-font: "Spectral", serif;
 }
