@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Spectral&display=swap" rel="stylesheet">
     <!-- /////////// - SCRIPTS - /////////// -->
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/adopt-help.js" defer></script>
 </head>
 <body>
     <header>
@@ -43,12 +44,14 @@
             </picture>
             <p>Whether you are looking for a playful kitten, a loyal dog, or a gentle rabbit, your new best friend is waiting.</p>
         </div>
-        <!-- INFO SECTION -->
-        <section>
+
+        <!-- ADOPTION SECTION -->
+        <section class="adoption">
             <h2>ADOPTION BOARD</h2>
-            <!-- PET CARDS -->
+             <!-- FILTERS -->
             <nav>
-                <ul class="adoptionFilters">
+                <ul class="navigation links adoptionFilters">
+                    <li><a id="all" href="#">Show All</a></li>
                     <li><a id="dogs" href="#">Dogs</a></li>
                     <li><a id="cats" href="#">Cats</a></li>
                     <li><a id="others" href="#">Others</a></li>
@@ -57,28 +60,27 @@
                     <li><a id="big" href="#">Big</a></li>
                 </ul>
             </nav>
+            <!-- ADOPTION PET CARDS -->
             <div class="cardContainer petAdoption">
-                <figure class="card">
-                    <figcaption>Rescued pets</figcaption>
-                    <img src="images/pets.webp" alt="Pets for adoption" loading="lazy">
-                    <span class="button"><a href="adopt-help.html">Adopt</a></span>
-                </figure>
             </div>
         </section>
-        <!-- CONTACT -->
+
+        <!-- MAP AND CONTACT -->
         <section class="map">
             <h2>COME AND MEET YOUR NEW FRIEND</h2>
             <!-- MAP -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1159.9925048356417!2d-77.00649690960071!3d-12.061803378054513!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1771014564511!5m2!1ses-419!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- CONTACT -->
             <div>
                 <h3>Contact Us</h3>
                 <p>Phone: +51 994853598</p>
                 <p>Address: Pje. Margarita Vargas 101, Lima 15019</p>
             </div>
         </section>
-        <!-- CONTACT / FORM SECTION -->
+
+        <!-- FORM SECTION -->
         <section>
-            <h2>KNOW WAYS TO HELP!</h2>
+            <h2>KNOW MORE WAYS TO HELP!</h2>
             <!-- FORM -->
             <div class="formContainer">
                 <picture>
@@ -105,7 +107,7 @@
     <footer>
         <div class="f-footer">
             <!-- Logo -->
-            <img class="logo" src="images/gsw-logo-white.svg" alt="Great & Small Whiskers!"  width="130" height="80">
+            <a href="index.html"><img class="logo" src="images/gsw-logo-white.svg" alt="Great & Small Whiskers!"  width="130" height="80"></a>
             <!-- Useful Links -->
             <nav class="links">
                 <ul>
@@ -123,6 +125,7 @@
             </div>
         </div>
         <p>©<span id="currentYear"></span> Great & Small Whiskers. 🐶 Alvin Timaná 🐱 Lima, Perú</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>

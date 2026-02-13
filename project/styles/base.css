@@ -47,7 +47,7 @@ header {
 
 #bName {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     position: absolute;
     top: 1.2rem;
     display: none;
@@ -61,7 +61,7 @@ header {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--background-color);
 }
 
@@ -111,7 +111,7 @@ nav {
 .button {
     width: 100%;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 5px;
     background-color: var(--accent-color1);
     color: var(--text-color);
@@ -207,18 +207,14 @@ section {
 
 /* ---------- MAP & CONTACT ----------- */
 .map {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.map h2 {
-    grid-column: span 2;
-}
-
 .map iframe {
-    margin: auto;
+    margin: 1rem 0;
+    max-width: 97%;
 }
 
 .map h3 {
@@ -309,15 +305,44 @@ footer p {
     text-align: center;
 }
 
-/************ THANK YOU PAGE *************/
-header h1 {
-    color: var(--background-color);
+#media a {
+    margin: .2rem .5rem;
 }
+
+/************ THANK YOU PAGE *************/
+.counter {
+    font-weight: 700;
+}
+
 .thanks .button {
     padding: .5rem;
 }
 
 /************ ADOPT AND HELP *************/
+.adoptionFilters {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid var(--accent-color1);
+    border-radius: 10px;
+}
+
+.adoptionFilters a {
+    display: block;
+    padding: .5rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.adoptionFilters a:hover {
+    background-color: unset;
+}
+
+.label {
+    font-weight: 700;
+}
 
 /************ PET CARE CENTER *************/
 .services .card {
