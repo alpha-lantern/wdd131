@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great & Small Whiskers - Pet Shelter</title>
-    <meta name="description" content="Great & Small Whiskers pet adoption! Whether you are looking for a playful kitten, a loyal dog, or a gentle rabbit, your new best friend is waiting.">
+    <title>Adopt & Help | Great & Small Whiskers</title>
+    <meta name="description" content="Whether you are looking for a playful kitten, a loyal dog, or a gentle rabbit, your new best friend is waiting at Great & Small Whiskers.">
     <meta name="author" content="Alvin Timaná">
     <!-- /////////// - STYLES - /////////// -->
     <link rel="stylesheet" href="styles/base.css">
@@ -19,12 +19,14 @@
 <body>
     <header>
         <!-- Logo -->
-        <img src="images/logo.svg" alt="Great & Small Whiskers!">
+        <img class="logo" src="images/gsw-logo-white.svg" alt="Great & Small Whiskers!" width="130" height="80">
+        <span id="bName">Great & Small Whiskers</span>
         <!-- Nav Menu -->
+        <button id="menu" aria-label="Open or Close Menu"></button>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="adopt-help.html">Adopt & Help</a></li>
+                <li><a href="#">Adopt & Help</a></li>
                 <li><a href="care-center.html">Pet Care</a></li>
             </ul>
         </nav>
@@ -32,54 +34,68 @@
 
     <main>
         <!-- HERO IMAGE -->
-        <picture class="hero">
-            <source media="(max-width: 450px)" src="images/hero-small.webp">
-            <source media="(max-width: 800px)" src="images/hero-medium.webp">
-            <img src="images/hero.webp" alt="Pets at Great & Small Whiskers">
-        </picture>
-        <h1>WELCOME TO GREAT & SMALL WHISKERS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptates odit nesciunt consequuntur officia officiis laudantium numquam exercitationem id mollitia est commodi doloribus, quaerat deserunt architecto ea aut reiciendis suscipit?</p>
+        <div class="hero">
+            <h1>MEET YOUR NEXT BEST FRIEND</h1>
+            <picture>
+                <source media="(max-width: 450px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="Pets at Great & Small Whiskers" width="1500" height="1000" fetchpriority=high>
+            </picture>
+            <p>Whether you are looking for a playful kitten, a loyal dog, or a gentle rabbit, your new best friend is waiting.</p>
+        </div>
         <!-- INFO SECTION -->
         <section>
-            <h2>MORE THAN A SHELTER</h2>
-            <!-- CARDS -->
-            <div>
-                <figure>
+            <h2>ADOPTION BOARD</h2>
+            <!-- PET CARDS -->
+            <nav>
+                <ul class="adoptionFilters">
+                    <li><a id="dogs" href="#">Dogs</a></li>
+                    <li><a id="cats" href="#">Cats</a></li>
+                    <li><a id="others" href="#">Others</a></li>
+                    <li><a id="small" href="#">Small</a></li>
+                    <li><a id="medium" href="#">Medium</a></li>
+                    <li><a id="big" href="#">Big</a></li>
+                </ul>
+            </nav>
+            <div class="cardContainer petAdoption">
+                <figure class="card">
                     <figcaption>Rescued pets</figcaption>
-                    <img src="images/pets.webp" alt="Pets for adoption">
-                    <p></p>
+                    <img src="images/pets.webp" alt="Pets for adoption" loading="lazy">
                     <span class="button"><a href="adopt-help.html">Adopt</a></span>
                 </figure>
-                <figure>
-                    <figcaption>Be part of our family</figcaption>
-                    <img src="images/family.webp" alt="Great & Small Whiskers family">
-                    <p></p>
-                    <span class="button"><a href="adopt-help.html">Help</a></span>
-                </figure>
-                <figure>
-                    <figcaption>Pet care services</figcaption>
-                    <img src="images/pet-care.webp" alt="Pet care services">
-                    <p></p>
-                    <span class="button"><a href="">Know More</a></span>
-                </figure>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section class="map">
+            <h2>COME AND MEET YOUR NEW FRIEND</h2>
+            <!-- MAP -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1159.9925048356417!2d-77.00649690960071!3d-12.061803378054513!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1771014564511!5m2!1ses-419!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h3>Contact Us</h3>
+                <p>Phone: +51 994853598</p>
+                <p>Address: Pje. Margarita Vargas 101, Lima 15019</p>
             </div>
         </section>
         <!-- CONTACT / FORM SECTION -->
         <section>
-            <h2>JOIN US!</h2>
+            <h2>KNOW WAYS TO HELP!</h2>
             <!-- FORM -->
-            <div class="form">
-                <img src="" alt="">
-                <form method="get" action="thanks.html">
+            <div class="formContainer">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="images/pets-call.webp">
+                    <source media="(max-width: 800px)" srcset="images/pets-call-small.webp">
+                    <img src="images/pets-call-medium.webp" alt="Cat and dog playing together" loading="lazy">
+                </picture>
+                <form id="subsForm" method="get" action="thanks.html">
                     <fieldset>
-                        <legend>Receive updates</legend>
+                        <legend>Adoption, Volunteer and More!</legend>
 
                         <label>Full Name<input type="text" name="name" id="name" required></label>
 
                         <label>Email<input type="email" name="email" id="email" placeholder="example@mail.com" required></label>
 
-                        <button title="subscribe">Subscribe</button>
-                        <p>By subscribing, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</p>
+                        <button class="button" title="subscribe">Know More</button>
+                        <p class="links">By subscribing, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</p>
                     </fieldset>
                 </form>
             </div>
@@ -87,23 +103,26 @@
     </main>
 
     <footer>
-        <!-- Logo -->
-        <img src="images/logo.svg" alt="Great & Small Whiskers!">
-        <!-- Useful Links -->
-        <nav>
-            <ul>
-                <li><a href="adopt.html">Adopt & Help</a></li>
-                <li><a href="care-center.html">Pet Care</a></li>
-                <li><a href="references.html">References</a></li>
-            </ul>
-        </nav>
-        <!-- Social Media Logos -->
-        <div>
-            <img src="" alt="Instagram">
-            <img src="" alt="Facebook">
-            <img src="" alt="X (Twitter)">
+        <div class="f-footer">
+            <!-- Logo -->
+            <img class="logo" src="images/gsw-logo-white.svg" alt="Great & Small Whiskers!"  width="130" height="80">
+            <!-- Useful Links -->
+            <nav class="links">
+                <ul>
+                    <li><a href="adopt-help.html">Adopt & Help</a></li>
+                    <li><a href="care-center.html">Pet Care</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+            <!-- Social Media Logos -->
+            <div id="media">
+                <p>Follow Us:</p>
+                <a href="https://instragram.com"><img src="images/instagram-logo.svg" alt="Instagram" width="30" height="30"></a>
+                <a id="facebook-logo" href="https://facebook.com"><img src="images/facebook-logo.svg" alt="Facebook" width="30" height="30"></a>
+                <a href="https://x.com"><img src="images/twitter-x-logo.svg" alt="Twitter - X" width="30" height="30"></a>
+            </div>
         </div>
-        <p>©<span id="currentYear"></span> Great & Small Whiskers 🐶 Alvin Timaná 🐱 Lima, Perú</p>
+        <p>©<span id="currentYear"></span> Great & Small Whiskers. 🐶 Alvin Timaná 🐱 Lima, Perú</p>
     </footer>
 </body>
 </html>
