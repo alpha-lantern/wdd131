@@ -1,6 +1,6 @@
 @media (min-width: 501px) {
     /* ------------ GENERAL ------------ */
-    main {
+    section {
         max-width: 1000px;
         margin: 0 auto 1rem;
     }
@@ -20,14 +20,9 @@
         display: none;
     }
 
-    nav {
-        justify-content: space-between;
-        flex: 1 1 auto;
-        padding: 0;
-    }
-
     .navigation {
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .navigation a {
@@ -39,19 +34,22 @@
     /* -------------- FORM -------------- */
     .formContainer {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: auto 2fr;
+        align-items: stretch;
+        height: auto;
     }
 
     .formContainer img {
-        max-height: 300px;
+        max-height: 20rem;
         width: 100%;
         height: auto;
         opacity: 100%;
-        padding: 0 0.5rem;
+        padding: .5rem;
     }
 
     #subsForm {
         position: relative;
+        padding: .5rem 0;
     }
 
     /* ----- FOOTER ADDITIONAL RULES ----- */
@@ -69,8 +67,12 @@
         border-radius: 5px;
     }
 
-    footer p {
-        text-align: center;
+    .f-footer {
+        flex-direction: row;
+    }
+
+    .f-footer .links a {
+        padding: 1rem;
     }
 }
 
@@ -81,6 +83,7 @@
         position: relative;
         background-color: var(--text-color);
         height: min-content;
+        /* container-type: inline-size; */
     }
 
     .hero picture {
@@ -88,23 +91,50 @@
         opacity: .6;
     }
 
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
     .hero h1, .hero p {
         position: absolute;
         color: var(--background-color);
+        left: 5%;
+        right: 5%;
     }
 
     .hero h1 {
-        left: 10%;
-        right: 10%;
-        top: 15%;
+        top: 5%;
         padding: 1rem;
         margin: 0 auto;
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: var(--background-color);
     }
 
     .hero p {
-        bottom: 35%;
+        top: 50%;
         padding: 2rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .hero h1{
+        top: 10%;
+    }
+
+    .hero h1, .hero p {
+        left: 15%;
+        right: 15%;
+    }
+}
+
+@media (min-width: 1401px) {
+    .hero h1{
+        font-size: 4rem;
+    }
+
+    .hero h1, .hero p {
+        left: 20%;
+        right: 20%;
     }
 }
